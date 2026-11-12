@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SlotsScene.unity
     guid: dc0e3600d1dcfc8438ae57581b24b0eb
+  - enabled: 1
+    path: Assets/Scenes/WinLoseScreens/WinScreen.unity
+    guid: 888a61f70d9bb764a96a4f2d2f3d75d3
+  - enabled: 1
+    path: Assets/Scenes/WinLoseScreens/LoseScreen.unity
+    guid: b49afe85199c1734296c6554679e77a1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

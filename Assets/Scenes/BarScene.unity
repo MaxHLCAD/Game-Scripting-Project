@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1890769568}
   - component: {fileID: 1890769572}
   m_Layer: 0
-  m_Name: ExitObject
+  m_Name: ExitHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
