@@ -8,5 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CasinoScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/BarScene.unity
+    guid: 64993f5e64ee6dc4d967b5f09875b24a
+  - enabled: 1
+    path: Assets/Scenes/DiceScene.unity
+    guid: 87607c204ea294640ad0ff6f00c5ce84
+  - enabled: 1
+    path: Assets/Scenes/PachinkoScene.unity
+    guid: c2d0e69f03b36b645b44d48f2994f869
+  - enabled: 1
+    path: Assets/Scenes/SlotsScene.unity
+    guid: dc0e3600d1dcfc8438ae57581b24b0eb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
