@@ -67,9 +67,7 @@ public class Dice : MonoBehaviour
                     moneyScript.ChangeMoney(betTotal);
                 }
 
-
-
-                    hasRolled = false;
+                hasRolled = false;
             }
         }
     }
@@ -102,18 +100,18 @@ public class Dice : MonoBehaviour
 
     public void IncreaseBet()
     {
-        if (moneyScript.money > 10)
+        if (moneyScript.money > betTotal && !hasBet)
         {
-            betTotal -= moneyScript.ChangeMoney(betAmount);
+            betTotal += betAmount;
             Debug.Log("Bet Increased!");
         }
     }
 
     public void DecreaseBet()
     {
-        if (betTotal > 0)
+        if (betTotal > 0 && !hasBet)
         {
-            betTotal -= moneyScript.ChangeMoney(-betAmount);
+            betTotal -= betAmount;
             Debug.Log("Bet Decreased!");
         }
 
