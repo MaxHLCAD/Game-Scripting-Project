@@ -85,10 +85,10 @@ public class Dice : MonoBehaviour
         diceAngles[0] = Vector3.Angle(dice.transform.forward, Vector3.up);
         diceAngles[5] = Vector3.Angle(-dice.transform.forward, Vector3.up); //
 
-        float smallestAngle = 100.0f;
+        float smallestAngle = 100000.0f;
         int   smallestInt = 0;
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
             if (smallestAngle > diceAngles[i])
             {
