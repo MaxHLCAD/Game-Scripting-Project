@@ -38,7 +38,23 @@ public class MoneyandWinLoseConditions : MonoBehaviour
         }
     }
 
+    public int ChangeMoney(int moneyChange)
+    {
+        int moneyNew = money - moneyChange;
+        int moneyOld = money;
 
+        if (moneyNew < 0)
+        {
+            moneyNew = 0;
+        }
+        else
+        {
+            moneyChange = moneyNew - moneyOld;
+            money = moneyNew;
+        }
+
+        return moneyChange;
+    }
     void YouLose()
     {
         hasLost = true;
