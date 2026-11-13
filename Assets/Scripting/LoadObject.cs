@@ -1,16 +1,16 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
+
 public class LoadObject : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+
+
 
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

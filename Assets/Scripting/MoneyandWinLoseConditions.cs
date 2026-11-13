@@ -9,11 +9,15 @@ public class MoneyandWinLoseConditions : MonoBehaviour
     //public GameObject player; // refers to player in inspector
     public float playerDeathTimer = 0f; // see void FixedUpdate() below  for context
     public bool startDeathTimer = false; // ^
+    public GameObject screenWin;
+    public GameObject screenLost;
 
-    private void Awake()
+    private void Start()
     {
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("CasinoScene");
+        screenWin.SetActive(false);
+        screenLost.SetActive(false);
     }
 
     void Update()
@@ -48,11 +52,10 @@ public class MoneyandWinLoseConditions : MonoBehaviour
         {
             moneyNew = 0;
         }
-        else
-        {
-            moneyChange = moneyNew - moneyOld;
-            money = moneyNew;
-        }
+        
+        moneyChange = moneyNew - moneyOld;
+        money = moneyNew;
+        
 
         return moneyChange;
     }
@@ -60,6 +63,7 @@ public class MoneyandWinLoseConditions : MonoBehaviour
     {
         hasLost = true;
         startDeathTimer = true;
+        screenLost.SetActive(true);
         //Destroy(player);
     }
 
@@ -67,7 +71,15 @@ public class MoneyandWinLoseConditions : MonoBehaviour
     {
         hasWon = true; 
         Debug.Log("ya did it bud");
-        SceneManager.LoadScene("WinScreen");
+        //SceneManager.LoadScene("WinScreen");
+        screenWin.SetActive(true);
+    }
+
+    public void Reset()
+    {
+        money = 500;
+        screenWin.SetActive(false);
+        screenLost.SetActive(false);
     }
 
     // i thought itd be funny if the player just dies before it takes you to the loss screen; remove if yall want
@@ -83,7 +95,7 @@ public class MoneyandWinLoseConditions : MonoBehaviour
                 playerDeathTimer = 0f;
                 startDeathTimer = false;
                 Debug.Log("you tapped out...");
-                SceneManager.LoadScene("LoseScreen");
+                //SceneManager.LoadScene("LoseScreen");
             }
         }
     }
