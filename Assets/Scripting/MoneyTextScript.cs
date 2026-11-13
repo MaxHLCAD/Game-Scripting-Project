@@ -6,6 +6,7 @@ public class MoneyTextScript : MonoBehaviour
 {
     [SerializeField] private MoneyandWinLoseConditions moneyScript; // refers to the money script; refered to in inspector
     [SerializeField] private TextMeshProUGUI moneyText; // so the text can be edited; refered in inspector
+
     void Start()
     {
         

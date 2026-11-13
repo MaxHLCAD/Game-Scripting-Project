@@ -10,6 +10,11 @@ public class MoneyandWinLoseConditions : MonoBehaviour
     public float playerDeathTimer = 0f; // see void FixedUpdate() below  for context
     public bool startDeathTimer = false; // ^
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Equals)) // debug code; DELETE LATER!!
