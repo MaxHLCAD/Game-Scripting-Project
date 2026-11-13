@@ -6,13 +6,14 @@ public class MoneyandWinLoseConditions : MonoBehaviour
     public int money = 500;
     public bool hasWon = false;
     public bool hasLost = false;
-    public GameObject player; // refers to player in inspector
+    //public GameObject player; // refers to player in inspector
     public float playerDeathTimer = 0f; // see void FixedUpdate() below  for context
     public bool startDeathTimer = false; // ^
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        SceneManager.LoadScene("CasinoScene");
     }
 
     void Update()
@@ -59,7 +60,7 @@ public class MoneyandWinLoseConditions : MonoBehaviour
     {
         hasLost = true;
         startDeathTimer = true;
-        Destroy(player);
+        //Destroy(player);
     }
 
     void YouWin()
