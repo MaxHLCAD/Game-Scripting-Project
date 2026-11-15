@@ -22,6 +22,9 @@ public class Dice : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI betText;
 
+    [SerializeField] private TextMeshProUGUI dice1Text;
+    [SerializeField] private TextMeshProUGUI dice2Text;
+
     private bool hasBet = false;
     private bool hasRolled = false;
 
@@ -41,6 +44,12 @@ public class Dice : MonoBehaviour
     {
         betText.text = "Bet Amount: $" + betTotal;
 
+        int diceNum1 = GetDiceNum(diceObject1.transform);
+        int diceNum2 = GetDiceNum(diceObject2.transform);
+
+        dice1Text.text = diceNum1.ToString();
+        dice2Text.text = diceNum2.ToString();
+
         if (hasBet)
         {
             if (diceRigid1.linearVelocity.magnitude > 0.0025f || diceRigid2.linearVelocity.magnitude > 0.0025f)
@@ -51,9 +60,6 @@ public class Dice : MonoBehaviour
             if (diceRigid1.linearVelocity.magnitude < 0.0025f && diceRigid2.linearVelocity.magnitude < 0.0025f && hasRolled)
             {
                 hasBet = false;
-
-                int diceNum1 = GetDiceNum(diceObject1.transform);
-                int diceNum2 = GetDiceNum(diceObject2.transform);
 
                 Debug.Log("Dice 1: " + diceNum1);
                 Debug.Log("Dice 2: " + diceNum2);
