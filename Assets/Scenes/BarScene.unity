@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 145762013}
   - component: {fileID: 145762012}
   m_Layer: 5
-  m_Name: BunnyGirl
+  m_Name: BunnyGirlDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,6 +1494,7 @@ GameObject:
   - component: {fileID: 954290284}
   - component: {fileID: 954290286}
   - component: {fileID: 954290285}
+  - component: {fileID: 954290287}
   m_Layer: 5
   m_Name: casinotext
   m_TagString: Untagged
@@ -1622,6 +1623,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954290283}
   m_CullTransparentMesh: 1
+--- !u!114 &954290287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954290283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf927d5361ca4c0b882c0d1d85f4626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  moneyScript: {fileID: 0}
+  moneyAmountText: {fileID: 954290285}
 --- !u!1 &1063186799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2736,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1674672452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1674672450}
+        m_TargetAssemblyTypeName: ExitScript, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1674672452
 MonoBehaviour:
   m_ObjectHideFlags: 0

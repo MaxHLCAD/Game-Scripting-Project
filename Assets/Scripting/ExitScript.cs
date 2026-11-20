@@ -7,7 +7,14 @@ public class ExitScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("CasinoScene");
+            Exit();
         }
     }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene("CasinoScene");
+    }
+
 }
+
