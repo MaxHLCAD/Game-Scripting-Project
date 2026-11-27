@@ -32,7 +32,7 @@ public class Dice : MonoBehaviour
     void Start()
     {
         //Grabbing money script
-        MoneyandWinLoseConditions[] tempArray = FindObjectsOfType(typeof(MoneyandWinLoseConditions)) as MoneyandWinLoseConditions[];
+        MoneyandWinLoseConditions[] tempArray = FindObjectsByType(typeof(MoneyandWinLoseConditions)) as MoneyandWinLoseConditions[];
         moneyScript = tempArray[0];
 
         dicePos1 = diceObject1.transform.position;
@@ -72,6 +72,8 @@ public class Dice : MonoBehaviour
                 {
                     moneyScript.ChangeMoney(betTotal);
                 }
+
+                betTotal = Mathf.Min(betTotal, moneyScript.money);
 
                 hasRolled = false;
             }
